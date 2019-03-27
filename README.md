@@ -33,7 +33,13 @@ For the test-driven development, we will be using the **Behaviour Driven Develop
 
 ## Database setup instructions
 
+### Creating bookmark_manager database
+
 1. Connect to psql in terminal `psql postgres`
-2. Run `CREATE DATABASE bookmark_manager;`
-3. Run `psql \c bookmark_manager;` (to connect to new db)
-3. Create `bookmarks` table using the query saved in the file `01_create_bookmarks_table.sql`
+2. Enter `CREATE DATABASE bookmark_manager;` command to create a new database called bookmark_manager
+
+### Creating bookmarks table on the bookmark_manager database
+
+1. Enter `\c bookmark_manager;` to connect to the database
+2. Create `bookmarks` table by running the sql script `01_create_bookmarks_table.sql`
+3. Run in pSQL by doing `\i db/migrations/01_create_bookmarks_table.sql` from the root directory of the repository

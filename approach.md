@@ -6,7 +6,7 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/01_creating
 
 Here we are practising CRUD on the database
 
-`Show` (read) a list of bookmarks
+[X] `Show` (read) a list of bookmarks
 `Add` (create) new bookmarks
 `Delete` (delete) bookmarks
 `Update` (update) bookmarks
@@ -94,6 +94,34 @@ e.g.
 - presenting Bookmark data to two different interfaces (feature test presents to the browser interface, unit test presents to the controller interface)
 
 ---
+
+## 04. Setting up a Database
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/04_setting_up_a_database.md
+
+- Our aim is to get the hard-coded data to read from a database (persist bookmarks across interactions.)
+- We used `PostgreSQL` (a database management system), a server that runs a database.
+- We can use `pSQL` to create a new database.
+
+
+---
+
+## 05. Creating your first table
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/05_creating_your_first_table.md
+
+## Creating bookmark_manager database
+
+1. Connect to psql in terminal `psql postgres`
+2. Enter `CREATE DATABASE bookmark_manager;` command to create a new database called bookmark_manager
+
+## Creating bookmarks table on the bookmark_manager database
+
+1. Enter `\c bookmark_manager;` to connect to the database
+2. Create `bookmarks` table by running the sql script `01_create_bookmarks_table.sql`
+3. Run in pSQL by doing `\i db/migrations/01_create_bookmarks_table.sql;` from the root directory of the repository
+
+
 
 
 
