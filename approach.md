@@ -121,6 +121,58 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/05_creating
 2. Create `bookmarks` table by running the sql script `01_create_bookmarks_table.sql`
 3. Run in pSQL by doing `\i db/migrations/01_create_bookmarks_table.sql;` from the root directory of the repository
 
+---
+
+## 06. Manipulating Table Data
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/06_manipulating_table_data.md
+
+- Use SQL to create, read (query), update and delete (CRUD) data in the table, inside PostgreSQL database `bookmark_manager`
+
+## Adding example bookmark entries into bookmarks table
+
+1. Use `\i db/migrations/02_add_bookmark_entries.sql;` to execute the SQL script to add bookmark entries to the bookmarks table in the `bookmark_manager` database
+
+---
+## 07. Interacting with PostgreSQL from Ruby
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/07_interacting_with_postgres_from_ruby.md
+
+- We are using the pg rubygem to get the application and database talking to each other
+https://bitbucket.org/ged/ruby-pg/wiki/Home
+
+```ruby
+=begin
+The pg gem makes a PG object available in Ruby.
+We can call connect on the PG object, passing in the database name.
+This will return an object that we can send a query to, let's call that object connection.
+To retrieve bookmarks from the database, we'll call exec on the connection object, passing in a query string.
+=end
+
+#Require the PG gem
+require 'pg'
+
+class Bookmark
+  #This is the class method
+  #Retrieve data from the database
+  def self.all
+    #Establish connection with 'bookmark_manager' database, we connect on the PG object and pass in the db name
+    connection = PG.connect( dbname: 'bookmark_manager' )
+    #exec method submits an SQL command to the server and waits for the result
+    #We can query on the PG object and we call that object the object connection
+    #The SQL command will select all from bookmarks table
+    result = connection.exec( "SELECT * FROM bookmarks;" )
+    #All result rows and columns are stored in a memory block attached to the PG::Result object
+    #We can map this onto an array and then format the output
+    list = result.map { |bookmark| bookmark['url'] }
+    list.join("\n")
+  end
+end
+
+```
+
+
+
 
 
 
