@@ -4,10 +4,12 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/01_creating
 
 ### Specification: List of requirements
 
-- Show a list of bookmarks
-- Add new bookmarks
-- Delete bookmarks
-- Update bookmarks
+Here we are practising CRUD on the database
+
+`Show` (read) a list of bookmarks
+`Add` (create) new bookmarks
+`Delete` (delete) bookmarks
+`Update` (update) bookmarks
 - Comment on bookmarks
 - Tag bookmarks into categories
 - Filter bookmarks by tag
@@ -56,6 +58,42 @@ https://github.com/makersacademy/course/blob/master/pills/ruby_web_project_setup
 
 https://github.com/makersacademy/course/blob/master/bookmark_manager/03_viewing_bookmarks.md
 
+Made some notes on RESTful routes. A RESTful route provides a mapping between HTTP verbs, controller actions, and (implicitly) CRUD operations in a database.
+
+- Applying MVC to push the heavy logic to the model
+
+| Component   | Responsibility                                | Refactor                                |
+|------------ |---------------------------------------------  |---------------------------------------- |
+| Model       | Encapsulate logic with relevant data          | Encapsulate bookmark data in a class    |
+| View        | Display the result to a user                  | Show the bookmark data in a list        |
+| Controller  | Get data from the model and put in the view   | Render bookmark data into to the view   |
+
+The controller–view interaction follows the MVC convention. 
+The controller combines data (the bookmarks) with the view (an erb template) to follow REST.
+
+e.g. 
+
+```ruby
+ get '/bookmarks' do
+    @bookmarks = Bookmark.all
+    #The controller combines data (the bookmarks) with the view (an erb template).
+    erb :"bookmarks/index"
+  end
+
+```
+
+- The controller-model interaction also follows the MVC convention. 
+- The controller gets data (the bookmarks) from the model.
+
+
+- The controller is like an integration test :) - we are making sure that the model layer, controller layer and view layers integrate well with one another :)
+
+- We want a method to retrieve the bookmarks from the Bookmark class. Don't want to create a new instance of a bookmark just yet.
+
+- The feature test for viewing bookmarks and the unit test for Bookmark are very similar which is a good sign.
+- presenting Bookmark data to two different interfaces (feature test presents to the browser interface, unit test presents to the controller interface)
+
+---
 
 
 
