@@ -110,6 +110,18 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/04_setting_
 
 https://github.com/makersacademy/course/blob/master/bookmark_manager/05_creating_your_first_table.md
 
+Use psql to create a table called `bookmarks` in the `bookmark_manager` database, with two columns:
+- `id`, a SERIAL PRIMARY KEY
+- `url`, a VARCHAR with a maximum length of 60.
+
+```
+bookmarks table
+
+  id | url
+-----|----------
+
+```
+
 ## Creating bookmark_manager database
 
 1. Connect to psql in terminal `psql postgres`
@@ -171,7 +183,17 @@ end
 
 ```
 
+---
 
+## 08. Upgrading your toolset
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/08_upgrading_your_toolset.md
+
+Upgrade our tooling so we can see what's going on in our database more easily.
+Add the 'create new bookmarks' feature to our application using the pg gem.
+Refactor all the complicated SQL in our Bookmark model using an Object-Relational Map.
+
+- 
 
 
 
