@@ -33,6 +33,34 @@ I would like to view a list of bookmarks
 
 ---
 
+## 02. Setting up the web project
+
+- This is a Ruby web project, applying the Sinatra framework and using Sinatra::Base to follow the modular form of Sinatra
+
+Testing Infrastructure:
+
+- Capybara
+- Rspec
+
+- First, we set up the project with Sinatra with RSpec and Capybara and tested that the infrastructure is up and running
+- Using a feature test, we made sure that the simple index page for your bookmark manager is showing
+- Rubocop is applied as a linter
+- SimpleCov is applied to show the test coverage metric
+- Rackup is used to run the server
+
+https://github.com/makersacademy/course/blob/master/pills/ruby_web_project_setup_list.md
+
+---
+
+## 03. Viewing Bookmarks
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/03_viewing_bookmarks.md
+
+
+
+
+
+
 
 
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Bookmark manager</title>
+    <title>Code coverage for Bookmarks manager</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,18 +14,18 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-26T16:50:08+00:00">2019-03-26T16:50:08+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-27T09:29:37+00:00">2019-03-27T09:29:37+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="yellow">86.67%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="red">
+         0.87
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>3</b> files in total.
     <b>15</b> relevant lines. 
-    <span class="green"><b>15</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <span class="green"><b>13</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,27 +51,27 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#a5913e5edabfd46dba77b19250e7b2b845c72c9a" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="strong"><a href="#98e31ad52291f2c5a3f0b2725ef0424a0fb0fd05" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
+        <td class="yellow strong">83.33 %</td>
         <td>10</td>
         <td>6</td>
-        <td>6</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>5</td>
+        <td>1</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#be167c1bf5d1f9b3264b909c7c638198fe03259a" class="src_link" title="spec/features/bookmark_page_spec.rb">spec/features/bookmark_page_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="strong"><a href="#3a4d4383cec07fbcda7d12504fc10e7dfd0cea87" class="src_link" title="spec/features/bookmark_page_spec.rb">spec/features/bookmark_page_spec.rb</a></td>
+        <td class="red strong">75.0 %</td>
         <td>6</td>
         <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>3</td>
+        <td>1</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#608f374f7a27c035216a4ae1f31da07031c42a43" class="src_link" title="spec/features/homepage_spec.rb">spec/features/homepage_spec.rb</a></td>
+        <td class="strong"><a href="#8191f9f155e30ca3a443a2fefe1bd0301f47b198" class="src_link" title="spec/features/homepage_spec.rb">spec/features/homepage_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>9</td>
         <td>5</td>
@@ -96,14 +96,14 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="a5913e5edabfd46dba77b19250e7b2b845c72c9a">
+        <div class="source_table" id="98e31ad52291f2c5a3f0b2725ef0424a0fb0fd05">
   <div class="header">
     <h3>spec/bookmark_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">83.33 %</span> covered</h4>
     <div>
       <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -146,8 +146,8 @@
           <code class="ruby">      bookmarks = Bookmark.all</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
           
           <code class="ruby">      expect(bookmarks).to include(&quot;http://www.makersacademy.com&quot;)</code>
         </li>
@@ -175,14 +175,14 @@
 </div>
 
       
-        <div class="source_table" id="be167c1bf5d1f9b3264b909c7c638198fe03259a">
+        <div class="source_table" id="3a4d4383cec07fbcda7d12504fc10e7dfd0cea87">
   <div class="header">
     <h3>spec/features/bookmark_page_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">75.0 %</span> covered</h4>
     <div>
       <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -207,8 +207,8 @@
           <code class="ruby">    visit(&quot;/bookmarks&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
           
           <code class="ruby">    expect(page).to have_text(&quot;http://www.makersacademy.com&quot;)</code>
         </li>
@@ -230,7 +230,7 @@
 </div>
 
       
-        <div class="source_table" id="608f374f7a27c035216a4ae1f31da07031c42a43">
+        <div class="source_table" id="8191f9f155e30ca3a443a2fefe1bd0301f47b198">
   <div class="header">
     <h3>spec/features/homepage_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>

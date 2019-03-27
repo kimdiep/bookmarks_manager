@@ -1,27 +1,27 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/bookmark_spec.rb": [
+      "/Users/kimdiep/Desktop/Kim-Github-Projects/makers/pair_programming/wk4/bookmarks_manager/spec/bookmark_spec.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
-        1,
+        0,
         null,
-        null,
-        null
-      ],
-      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/features/bookmark_page_spec.rb": [
-        1,
-        1,
-        1,
-        1,
         null,
         null
       ],
-      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/features/homepage_spec.rb": [
+      "/Users/kimdiep/Desktop/Kim-Github-Projects/makers/pair_programming/wk4/bookmarks_manager/spec/features/bookmark_page_spec.rb": [
+        1,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/kimdiep/Desktop/Kim-Github-Projects/makers/pair_programming/wk4/bookmarks_manager/spec/features/homepage_spec.rb": [
         1,
         null,
         1,
@@ -33,6 +33,6 @@
         null
       ]
     },
-    "timestamp": 1553619008
+    "timestamp": 1553678977
   }
 }
