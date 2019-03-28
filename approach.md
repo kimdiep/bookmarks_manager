@@ -197,11 +197,15 @@ Refactor all the complicated SQL in our Bookmark model using an Object-Relationa
 
 ## 09. Setting up a test environment
 
- - Script to reset your database every time you run the tests. 
- - You'll build a test environment for your web application.
+ - Script to reset your database every time tests are run. 
+ - Build a test environment for web application.
 
 https://github.com/makersacademy/course/blob/master/bookmark_manager/09_setting_up_a_testing_environment.md
 
+- When we run our server using rspec, the ENV['ENVIRONMENT'] variable is set to 'test', and our Bookmark class connects to bookmark_manager_test.
+- When we run our server in any other way, the ENV['ENVIRONMENT'] variable is not set, and our Bookmark class connects to bookmark_manager.
+
+---
 
 
 
