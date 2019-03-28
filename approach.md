@@ -7,7 +7,7 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/01_creating
 Here we are practising CRUD on the database
 
 [X] `Show` (read) a list of bookmarks
-`Add` (create) new bookmarks
+[X] `Add` (create) new bookmarks
 `Delete` (delete) bookmarks
 `Update` (update) bookmarks
 - Comment on bookmarks
@@ -253,6 +253,24 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/11_wrapping
 - Bookmark instance responds to id and url.
 
 ---
+
+## 12. CRUD
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/12_deleting_bookmarks.md
+
+> User Story:
+> As a user, 
+> I must be able to delete bookmarks
+> so that I can remove the bookmarks I don't want from the bookmark manager database
+
+
+Here's the user journey:
+
+- Visit the bookmarks page.
+- Click a 'delete' button next to a bookmark.
+- See the bookmarks page, without that bookmark.
+
+----
 
 
 

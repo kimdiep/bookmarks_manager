@@ -5,6 +5,9 @@ require './lib/bookmark'
 
 # Bookmark Manager class
 class BookmarkManager < Sinatra::Base
+
+  enable :sessions, :method_override
+
   get '/' do
     'Bookmark Manager'
   end
@@ -20,6 +23,13 @@ class BookmarkManager < Sinatra::Base
 
   post '/bookmarks' do
     Bookmark.create(url: params[:url], title: params[:title])
+    redirect '/bookmarks'
+  end
+
+  # REST routing is applied
+  # Can utilise params[id] from the POST(delete) method to interpolate into SQL to delete the bookmark with that ID, and redirect
+  delete '/bookmarks/:id' do
+    Bookmark.delete(id: params[:id])
     redirect '/bookmarks'
   end
 
