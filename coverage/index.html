@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-28T17:09:42+00:00">2019-03-28T17:09:42+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-28T17:14:41+00:00">2019-03-28T17:14:41+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>77</b> relevant lines. 
-    <span class="green"><b>77</b> lines covered</span> and
+    <b>85</b> relevant lines. 
+    <span class="green"><b>85</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,9 +53,9 @@
       <tr>
         <td class="strong"><a href="#98e31ad52291f2c5a3f0b2725ef0424a0fb0fd05" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>50</td>
-        <td>29</td>
-        <td>29</td>
+        <td>62</td>
+        <td>37</td>
+        <td>37</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -83,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#3a682e3fc9a48e2d76239e9558a2f07ba73dfcd6" class="src_link" title="spec/features/bookmark_delete_spec.rb">spec/features/bookmark_delete_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
+        <td>20</td>
         <td>8</td>
         <td>8</td>
         <td>0</td>
@@ -93,7 +93,7 @@
       <tr>
         <td class="strong"><a href="#6b13b94f39fba49378bc03f4772ba44b4773357a" class="src_link" title="spec/features/bookmark_update_spec.rb">spec/features/bookmark_update_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
+        <td>22</td>
         <td>13</td>
         <td>13</td>
         <td>0</td>
@@ -141,8 +141,8 @@
     <h3>spec/bookmark_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>29</b> relevant lines. 
-      <span class="green"><b>29</b> lines covered</span> and
+      <b>37</b> relevant lines. 
+      <span class="green"><b>37</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -405,7 +405,7 @@
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="44">
@@ -417,7 +417,7 @@
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="46">
@@ -444,7 +444,79 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#update&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;updates the specific bookmark&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      bookmark = Bookmark.create(title: &#39;Makers Academy&#39;, url: &#39;http://www.makersacademy.com&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      updated_bookmark = Bookmark.update(id: bookmark.id, url: &#39;http://www.pusheen.com&#39;, title: &#39;Pusheen AGAIN!&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(updated_bookmark).to be_a Bookmark</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(updated_bookmark.id).to eq bookmark.id</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(updated_bookmark.title).to eq &#39;Pusheen AGAIN!&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(updated_bookmark.url).to eq &#39;http://www.pusheen.com&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">end</code>
@@ -627,10 +699,10 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">feature &#39;Deleting a bookmark&#39; do</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -642,112 +714,106 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &#39;User deletes a bookmark&#39; do</code>
+          <code class="ruby">feature &#39;Deleting a bookmark&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">=begin</code>
+          <code class="ruby">  scenario &#39;User deletes a bookmark&#39; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">  Setting up test data</code>
+          <code class="ruby">    #   Setting up test data</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">  Checking that the data is present</code>
+          <code class="ruby">    #   Checking that the data is present</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  Carrying out the DELETE action</code>
+          <code class="ruby">    #   Carrying out the DELETE action</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  Checking that the data has been removed</code>
+          <code class="ruby">    #   Checking that the data has been removed</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">    #</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">=end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">    Bookmark.create(url: &#39;http://www.makersacademy.com&#39;, title: &#39;Makers Academy&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">    visit(&#39;/bookmarks&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).to have_link(&#39;Makers Academy&#39;, href: &#39;http://www.makersacademy.com&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">    #Capybara&#39;s first method to click the Delete button inside the first element with class &#39;bookmark&#39;.</code>
+          <code class="ruby">    # Capybara&#39;s first method to click the Delete button inside the first element with class &#39;bookmark&#39;.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">    first(&#39;.bookmark&#39;).click_button &#39;Delete&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(current_path).to eq &#39;/bookmarks&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).not_to have_link(&#39;Makers Academy&#39;, href: &#39;http://www.makersacademy.com&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -772,46 +838,46 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">feature &#39;Bookmark Update&#39; do</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  scenario &#39;User updates a bookmark&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    bookmark = Bookmark.create(url: &#39;http://www.makersacademy.com&#39;, title: &#39;Makers Academy&#39;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit(&#39;/bookmarks&#39;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(page).to have_link(&#39;Makers Academy&#39;, href: &#39;http://www.makersacademy.com&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="2">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">feature &#39;Bookmark Update&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &#39;User updates a bookmark&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    bookmark = Bookmark.create(url: &#39;http://www.makersacademy.com&#39;, title: &#39;Makers Academy&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit(&#39;/bookmarks&#39;)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    first(&#39;.bookmark&#39;).click_button &#39;Edit&#39;</code>
+          <code class="ruby">    expect(page).to have_link(&#39;Makers Academy&#39;, href: &#39;http://www.makersacademy.com&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -820,73 +886,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">    #Sinatra named parameters for this route: visiting /bookmarks/1/edit will allow the user to update a bookmark with an ID of 1 etc.</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(current_path).to eq &quot;/bookmarks/#{bookmark.id}/edit&quot;</code>
+          <code class="ruby">    first(&#39;.bookmark&#39;).click_button &#39;Edit&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    # Sinatra named parameters for this route: visiting /bookmarks/1/edit will allow the user to update a bookmark with an ID of 1 etc.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in(&#39;url&#39;, with: &quot;http://www.pusheen.com&quot;)</code>
+          <code class="ruby">    expect(current_path).to eq &quot;/bookmarks/#{bookmark.id}/edit&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    fill_in(&#39;title&#39;, with: &quot;Pusheen AGAIN!&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    click_button(&#39;Submit&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in(&#39;url&#39;, with: &#39;http://www.pusheen.com&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in(&#39;title&#39;, with: &#39;Pusheen AGAIN!&#39;)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(current_path).to eq &#39;/bookmarks&#39;</code>
+          <code class="ruby">    click_button(&#39;Submit&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">    expect(page).not_to have_link(&#39;Makers Academy&#39;, href: &#39;http://www.makersacademy.com&#39;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
+          <code class="ruby">    expect(current_path).to eq &#39;/bookmarks&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).not_to have_link(&#39;Makers Academy&#39;, href: &#39;http://www.makersacademy.com&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_link(&#39;Pusheen AGAIN!&#39;, href: &#39;http://www.pusheen.com&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
