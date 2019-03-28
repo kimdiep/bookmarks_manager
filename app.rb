@@ -34,7 +34,7 @@ class BookmarkManager < Sinatra::Base
 
   # REST routing is applied for update action
   get '/bookmarks/:id/edit' do
-    @bookmark_id = params[:id]
+    @bookmark = Bookmark.find(id: params[:id])
     erb :'bookmarks/edit'
   end
 

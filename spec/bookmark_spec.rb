@@ -59,4 +59,21 @@ describe Bookmark do
     end
   end
 
+  describe '#find' do
+    #ORM pattern to wrap the bookmark data in a useful Ruby object.
+    it 'returns the requested bookmark object' do
+      bookmark = Bookmark.create(title: 'Makers Academy', url: 'http://www.makersacademy.com')
+      
+      # Our user needs to see the current data in the edit form.
+      # To do this, we need to pass more than just @bookmark_id to the form. 
+      #We need to pass a Bookmark object that wraps the data for that bookmark.
+      result = Bookmark.find(id: bookmark.id)
+
+      expect(result).to be_a Bookmark
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'Makers Academy'
+      expect(result.url).to eq 'http://www.makersacademy.com'
+    end
+  end
+
 end
