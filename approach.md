@@ -207,6 +207,39 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/09_setting_
 
 ---
 
+## 10. Creating Bookmarks
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/10_creating_bookmarks.md
+
+- Add new bookmarks
+- 'adding bookmarks to the database' from browser to database: across the whole stack.
+
+> User Story:
+> As a user, 
+> I must be able to add bookmarks to the app 
+> so that I can log my favourite bookmarks to see later on
+
+- This is RESTful route, so at this step it's sensible to factor this into the Sinatra routing
+
+- HTTP VERB: POST request 
+- URI: /bookmarks         
+- Controller#action: bookmarks#create
+
+- HTTP VERB: POST-REDIRECT LOOP redirected to a GET route
+- The following URI pattern to be used: /bookmarks/new
+- Controller#action: bookmarks#new
+
+- 1. The user will go to /bookmarks/new
+- 2. They will add a url to a form, they will click 'Submit'
+- 3. They can view the bookmark (database updated)
+
+- The form data will be submitted to a different route in Sinatra for saving to the database.
+
+
+
+
+
+
 
 
 
