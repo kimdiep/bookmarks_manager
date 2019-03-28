@@ -193,7 +193,15 @@ Upgrade our tooling so we can see what's going on in our database more easily.
 Add the 'create new bookmarks' feature to our application using the pg gem.
 Refactor all the complicated SQL in our Bookmark model using an Object-Relational Map.
 
-- 
+---
+
+## 09. Setting up a test environment
+
+ - Script to reset your database every time you run the tests. 
+ - You'll build a test environment for your web application.
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/09_setting_up_a_testing_environment.md
+
 
 
 
