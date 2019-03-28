@@ -14,17 +14,21 @@
         null,
         null,
         1,
+        1,
+        1,
         null,
+        1,
         null,
-        null,
+        1,
+        1,
         null,
         1,
         1,
         1,
+        null,
+        null,
+        null,
         1,
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -36,6 +40,7 @@
       "/Users/kimdiep/Desktop/Kim-Github-Projects/makers/pair_programming/wk4/bookmarks_manager/spec/features/bookmark_create_spec.rb": [
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -80,6 +85,6 @@
         null
       ]
     },
-    "timestamp": 1553772505
+    "timestamp": 1553785553
   }
 }

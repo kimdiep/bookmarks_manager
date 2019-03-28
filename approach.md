@@ -235,6 +235,28 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/10_creating
 
 - The form data will be submitted to a different route in Sinatra for saving to the database.
 
+---
+
+## 11. Wrapping Database data in Program Objects
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/11_wrapping_database_data_in_program_objects.md
+
+- Add a title column to the bookmarks table
+- Display it on the homepage instead of the link URL
+- Wrap database data in a Ruby object
+
+- Here, we are mapping objects across systems
+
+
+- Here, we get the result object from the database
+- Wrap it in a Bookmark instance
+- Bookmark instance responds to id and url.
+
+---
+
+
+
+
 
 
 

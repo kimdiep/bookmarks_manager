@@ -67,8 +67,9 @@ end
 
 ```
 
+### Adding a title data field into the bookmarks table
 
-
+1. Run the SQL script `\i db/migrations/03_add_title_to_bookmarks.sql;` to create a title data field for the bookmarks table
 
 ### Creating a db backup
 - In terminal to create your backup db
