@@ -1,0 +1,7 @@
+<form action="/bookmarks/<%= @bookmark_id %>" method="post">
+<%# Again, we are using the method-override for patch since html doesn't have this automatically available to be defined %>
+  <input type="hidden" name="_method" value="PATCH" />
+  <input type="text" name="url" />
+  <input type="text" name="title" />
+  <input type="submit" value="Submit" />
+</form>

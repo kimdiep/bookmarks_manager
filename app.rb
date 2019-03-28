@@ -5,7 +5,6 @@ require './lib/bookmark'
 
 # Bookmark Manager class
 class BookmarkManager < Sinatra::Base
-
   enable :sessions, :method_override
 
   get '/' do
@@ -26,11 +25,24 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end
 
-  # REST routing is applied
+  # REST routing is applied for delete action
   # Can utilise params[id] from the POST(delete) method to interpolate into SQL to delete the bookmark with that ID, and redirect
   delete '/bookmarks/:id' do
     Bookmark.delete(id: params[:id])
     redirect '/bookmarks'
+  end
+
+  # REST routing is applied for update action
+  get '/bookmarks/:id/edit' do
+    @bookmark_id = params[:id]
+    erb :'bookmarks/edit'
+  end
+
+  patch '/bookmarks/:id' do
+    # patch action to /bookmarks/:id/edit route to update a bookmark based on id passed in via the params
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+    connection.exec("UPDATE bookmarks SET url = '#{params[:url]}', title = '#{params[:title]}' WHERE id = '#{params[:id]}'")
+    redirect('/bookmarks')
   end
 
   run! if app_file == $PROGRAM_NAME

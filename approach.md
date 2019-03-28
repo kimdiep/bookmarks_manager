@@ -8,7 +8,7 @@ Here we are practising CRUD on the database
 
 [X] `Show` (read) a list of bookmarks
 [X] `Add` (create) new bookmarks
-`Delete` (delete) bookmarks
+[X] `Delete` (delete) bookmarks
 `Update` (update) bookmarks
 - Comment on bookmarks
 - Tag bookmarks into categories
@@ -271,6 +271,32 @@ Here's the user journey:
 - See the bookmarks page, without that bookmark.
 
 ----
+## 13. CRUD
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/13_crud.md
+
+> User Story:
+> As a user, 
+> I must be able to update bookmarks
+> so that I can update existing bookmarks on the bookmark manager database and maintain it
+
+The user journey is:
+- Visit the 'update bookmark' form for a particular bookmark.
+- Fill in the form with new data – and submit it.
+- See the homepage, with the updated bookmark title (and the old one is gone).
+
+### This is the development workflow we are following:
+
+- Requirement
+- User Story
+- Feature Test
+- Unit Tests
+- Implementation
+- Refactoring
+
+---
+
+
 
 
 
