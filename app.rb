@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
 require 'sinatra/base'
+require 'sinatra/flash'
 require './lib/bookmark'
 #Script is run when the application boots
 require './database_connection_setup'
+require 'uri'
 
 # Bookmark Manager class
 class BookmarkManager < Sinatra::Base
   enable :sessions, :method_override
+  register Sinatra::Flash
 
   get '/' do
     'Bookmark Manager'
@@ -23,7 +26,16 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    Bookmark.create(url: params[:url], title: params[:title])
+
+    # The `=~` operator matches the regular expression against a string, 
+    #and it returns either the offset of the match from the string if it is found, otherwise nil.
+    if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
+      Bookmark.create(url: params['url'], title: params[:title])
+    else
+      #The Flash is used to display one-time messages.
+      flash[:notice] = "This is an invalid URL."
+    end
+ 
     redirect '/bookmarks'
   end
 

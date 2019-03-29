@@ -2,6 +2,7 @@
 
 require 'pg'
 require 'database_connection'
+require 'uri'
 
 # Bookmark class
 class Bookmark

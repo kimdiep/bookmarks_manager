@@ -319,7 +319,30 @@ https://github.com/makersacademy/course/blob/master/bookmark_manager/14_extracti
 - Wrap PG's exec method with a method, DatabaseConnection.query, that executes queries on the database.
 - Replace Bookmark calls to PG.connect and connection with calls to DatabaseConnection.query
 
+----
 
+## 15. Validating Bookmarks
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/15_validating_bookmarks.md
+
+>As a user
+So that the bookmarks I save are useful
+I want to only save a valid URL
+
+
+- Good to add validation in the application
+- Validation from client-side and server-side important
+- Can't just rely on validation from client-side, it's got to be validated at server-side too
+
+e.g. - Validation that ensures the submitted URL is, in fact, a valid URL
+
+- Error message, on the page, if the user does not submit a real URL
+
+- Adding a feature test for an invalid URL.
+- Adding Sinatra-Flash to show a message, passing this test.
+- Refactoring the validation logic into the Bookmark model.
+
+----
 
 
 
