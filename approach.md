@@ -294,7 +294,30 @@ The user journey is:
 - Implementation
 - Refactoring
 
----
+
+----
+
+## 14. Extracting a database setup object
+
+https://github.com/makersacademy/course/blob/master/bookmark_manager/14_extracting_a_database_setup_object.md
+
+
+- The application can read and write from and to the db
+
+**Rationale:**
+
+- Bookmark class methods has too much responsibility as it connect to the correct database for the current environment, and manipulate data in that database.
+- We don't want to create a new connection using PG.connect every time we want to transact with the database from the Bookmark model
+- Solution: Extract an object which is used to setup a connection to the database when the application starts, and refactor Bookmark class to use it.
+
+- Separate application behaviour from database behaviour.
+- Wrap an adapter object - DatabaseConnection wrapper class.
+
+**Approach:**
+- Extract the database connection logic to an object, DatabaseConnection.
+- Use DatabaseConnection to set up a persistent connection to the correct database, with a method setup.
+- Wrap PG's exec method with a method, DatabaseConnection.query, that executes queries on the database.
+- Replace Bookmark calls to PG.connect and connection with calls to DatabaseConnection.query
 
 
 

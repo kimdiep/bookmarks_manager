@@ -92,6 +92,44 @@
         1,
         null
       ],
+      "/Users/kimdiep/Desktop/Kim-Github-Projects/makers/pair_programming/wk4/bookmarks_manager/spec/database_connection_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/kimdiep/Desktop/Kim-Github-Projects/makers/pair_programming/wk4/bookmarks_manager/spec/features/bookmark_create_spec.rb": [
         null,
         null,
@@ -186,6 +224,6 @@
         null
       ]
     },
-    "timestamp": 1553793746
+    "timestamp": 1553854484
   }
 }

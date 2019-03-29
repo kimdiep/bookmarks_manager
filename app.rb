@@ -2,6 +2,8 @@
 
 require 'sinatra/base'
 require './lib/bookmark'
+#Script is run when the application boots
+require './database_connection_setup'
 
 # Bookmark Manager class
 class BookmarkManager < Sinatra::Base
