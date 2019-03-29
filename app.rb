@@ -26,16 +26,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-
-    # The `=~` operator matches the regular expression against a string, 
-    #and it returns either the offset of the match from the string if it is found, otherwise nil.
-    if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
-      Bookmark.create(url: params['url'], title: params[:title])
-    else
-      #The Flash is used to display one-time messages.
-      flash[:notice] = "This is an invalid URL."
-    end
- 
+    flash[:notice] = "This is an invalid URL." unless Bookmark.create(url: params[:url], title: params[:title])
     redirect '/bookmarks'
   end
 

@@ -26,13 +26,19 @@ describe Bookmark do
   end
 
   describe '#create' do
+
+    it 'new bookmark not created if the URL is invalid' do
+      Bookmark.create(url: 'pusheen-test', title: 'Pusheen Title')
+      expect(Bookmark.all).not_to include 'pusheen-test'
+    end
+
     it 'creates a new bookmark' do
-      bookmark = Bookmark.create(url: 'pusheen-test', title: 'Pusheen Title')
+      bookmark = Bookmark.create(url: 'https://www.pusheen.com', title: 'Pusheen Title')
       persisted_data = persisted_data(id: bookmark.id)
 
       expect(bookmark).to be_a Bookmark
       expect(bookmark.id).to eq persisted_data.first['id']
-      expect(bookmark.url).to eq 'pusheen-test'
+      expect(bookmark.url).to eq 'https://www.pusheen.com'
       expect(bookmark.title).to eq 'Pusheen Title'
     end
   end
